@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Voice Demo Player example</title>
+  <script src="../voice-demo-player.js" defer></script>
+  <style>
+    body { font-family: system-ui, sans-serif; background: #e5e7eb; margin: 0; padding: 32px; }
+    .grid { display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-start; }
+    .grid > div { width: 320px; max-width: 100%; }
+    h2 { font-size: 14px; margin: 0 0 8px; }
+  </style>
+</head>
+<body>
+  <div class="grid">
+    <div>
+      <h2>Light, several demos, downloads on</h2>
+      <voice-demo-player name="Jane Doe" theme="light" downloads button-url="mailto:jane@example.com">
+        <a href="audio/commercial.mp3">Commercial</a>
+        <a href="audio/narration.mp3">Narration</a>
+        <a href="audio/character.mp3">Character</a>
+      </voice-demo-player>
+    </div>
+
+    <div>
+      <h2>Dark, one demo</h2>
+      <voice-demo-player name="Jane Doe" theme="dark" button-url="/contact" button-text="Book a Session">
+        <a href="audio/commercial.mp3">Commercial</a>
+      </voice-demo-player>
+    </div>
+
+    <div>
+      <h2>Custom colors, no button</h2>
+      <voice-demo-player name="Jane Doe" bg="#1f1135" text="#f5f3ff" accent="#f472b6">
+        <a href="audio/narration.mp3">Narration</a>
+        <a href="audio/character.mp3">Character</a>
+      </voice-demo-player>
+    </div>
+  </div>
+</body>
+</html>
